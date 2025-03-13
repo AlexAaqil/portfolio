@@ -3,7 +3,7 @@
     <div class="container">
       <div class="image">
         <img
-          src="../assets/images/alex-aaqil-profile-photo.png"
+          src="../assets/images/alex-aaqil-profile-photo.webp"
           alt="Profile Photo"
         />
       </div>
@@ -39,10 +39,11 @@
       <div class="content">
         <div class="image">
           <img
-            src="../assets/images/alex-aaqil-profile.jpg"
+            src="../assets/images/alex-aaqil-profile.webp"
             alt="Profile Photo"
             width="300"
             height="300"
+            loading="lazy"
           />
         </div>
 
@@ -89,7 +90,13 @@
       <div class="content cards">
         <div class="card">
           <div class="image">
-            <img src="../assets/images/shea-254.png" alt="Project Photo" />
+            <img
+              src="../assets/images/shea-254.webp"
+              alt="Project Photo"
+              loading="lazy"
+              width="300"
+              height="300"
+            />
           </div>
 
           <div class="text">
@@ -108,7 +115,13 @@
 
         <div class="card">
           <div class="image">
-            <img src="../assets/images/hsms.png" alt="Project Photo" />
+            <img
+              src="../assets/images/hsms.webp"
+              alt="Project Photo"
+              loading="lazy"
+              width="300"
+              height="300"
+            />
           </div>
 
           <div class="text">
@@ -127,7 +140,13 @@
 
         <div class="card">
           <div class="image">
-            <img src="../assets/images/hrms.png" alt="Project Photo" />
+            <img
+              src="../assets/images/hrms.webp"
+              alt="Project Photo"
+              loading="lazy"
+              width="300"
+              height="300"
+            />
           </div>
 
           <div class="text">
@@ -146,7 +165,13 @@
 
         <div class="card">
           <div class="image">
-            <img src="../assets/images/au.png" alt="Project Photo" />
+            <img
+              src="../assets/images/au.webp"
+              alt="Project Photo"
+              loading="lazy"
+              width="300"
+              height="300"
+            />
           </div>
 
           <div class="text">
@@ -166,8 +191,11 @@
         <div class="card">
           <div class="image">
             <img
-              src="../assets/images/lake-elementaita-manor.png"
+              src="../assets/images/lake-elementaita-manor.webp"
               alt="Project Photo"
+              loading="lazy"
+              width="300"
+              height="300"
             />
           </div>
 
