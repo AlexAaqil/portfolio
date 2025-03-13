@@ -1,0 +1,113 @@
+$navbar_height: 10dvh;
+nav {
+    height: $navbar_height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5%;
+    position: relative;
+    position: sticky;
+    top: 0;
+    background: #fff;
+
+    a {
+        font-weight: bold;
+    }
+
+    .brand {
+        a {
+            @include font_size(1rem, 1.6rem);
+
+            &:hover {
+                color: $faded_text;
+            }
+        }
+    }
+
+    .links {
+        display: none;
+    }
+
+    .show {
+        position: absolute;
+        top: $navbar_height;
+        right: 0;
+        width: 60%;
+        padding: 2rem;
+        background: rgba(#000, .85);
+        backdrop-filter: blur(15px);
+        display: grid;
+        gap: 2em;
+
+        a {
+            color: #fff;
+        }
+
+        .active {
+            color: #00f7ff;
+        }
+    }
+
+    .burger_menu {
+        display: block;
+        cursor: pointer;
+
+        .burger_icon {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            span {
+                width: 100%;
+                height: 3px;
+                background: #000;
+            }
+        }
+    }
+
+    .active_burger {
+        span {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            &:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    nav {
+        .links {
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+
+            a {
+                color: $faded_text;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: $link_color;
+                    text-decoration: underline;
+                    text-decoration-color: $link_color;
+                    text-decoration-thickness: 2px;
+                    text-underline-offset: 0.8rem;
+                }
+            }
+        }
+
+        .burger_menu {
+            display: none;
+        }
+    }
+}

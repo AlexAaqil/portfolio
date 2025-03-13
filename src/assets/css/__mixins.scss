@@ -1,0 +1,7 @@
+@mixin font_size($mobile, $desktop) {
+    font-size: $mobile;
+
+    @media screen and (min-width: 1024px) {
+        font-size: $desktop;
+    }
+}
