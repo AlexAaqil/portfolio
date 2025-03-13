@@ -217,6 +217,14 @@
             <li>Git</li>
           </ul>
         </div>
+
+        <div class="card">
+          <p class="title">Additional Skills</p>
+          <ul>
+            <li>SEO</li>
+            <li>Grapic Design</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
