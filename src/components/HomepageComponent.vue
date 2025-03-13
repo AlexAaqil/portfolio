@@ -50,12 +50,12 @@
         <div class="text">
           <div class="stats">
             <div class="stat">
-              <p>2+</p>
+              <p>3+</p>
               <p>Years of Experience</p>
             </div>
 
             <div class="stat">
-              <p>50+</p>
+              <p>25+</p>
               <p>Complete Projects</p>
             </div>
           </div>
