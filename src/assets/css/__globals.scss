@@ -6,6 +6,8 @@
 }
 
 body {
+    background: $theme_background;
+    color: $text_color;
     scroll-behavior: smooth;
 }
 

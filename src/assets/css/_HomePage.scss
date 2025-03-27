@@ -25,45 +25,30 @@
 
         .container {
             display: grid;
-            gap: 1em;
-            text-align: center;
-
-            .image,
-            .image img {
-                border-radius: 50%;
-            }
+            gap: 2.5em;
 
             .image {
-                height: 300px;
-                width: 300px;
+                img {
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                }
             }
 
             .content {
+                display: grid;
+                gap: 3.2em;
+
                 .text{
+                    .title {
+                        @include font_size(2.4rem, 6.8rem);
+                        line-height: 1;
+                        margin: 0.2em 0;
+                    }
+
                     p {
                         line-height: 1.5;
-
-                        &:first-of-type {
-                            @include font_size(1rem, 1.12rem);
-                        }
-
-                        &:nth-of-type(2) {
-                            @include font_size(2.4rem, 6.4rem);
-                            font-weight: bold;
-                        }
-
-                        &:nth-of-type(3) {
-                            @include font_size(1.48rem, 2.4rem);
-                        }
                     }
-                }
-
-                .buttons {
-                    margin: 1em 0;
-                }
-
-                .socials_icons {
-                    justify-content: center;
                 }
             }
         }
@@ -115,6 +100,11 @@
                     .image {
                         height: 320px;
                         padding: 12px;
+
+                        img {
+                            object-fit: cover;
+                            border-radius: 8px;
+                        }
                     }
 
                     .text {
@@ -177,9 +167,21 @@
     .HomePage {
         .Hero {
             .container {
-                width: 75%;
+                width: 95%;
                 grid-template-columns: 1fr 1fr;
                 align-items: center;
+
+                .image {
+                    height: 500px;
+                    width: 500px;
+                    justify-self: flex-end;
+                }
+
+                text {
+                    p {
+                        width: 70%;
+                    }
+                }
             }
         }
 

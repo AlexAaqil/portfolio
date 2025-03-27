@@ -1,4 +1,5 @@
 $navbar_height: 10dvh;
+
 nav {
     height: $navbar_height;
     display: flex;
@@ -8,7 +9,8 @@ nav {
     position: relative;
     position: sticky;
     top: 0;
-    background: #fff;
+    background: $navbar_background;
+    color: $text_color;
 
     a {
         font-weight: bold;
@@ -19,7 +21,7 @@ nav {
             @include font_size(1rem, 1.6rem);
 
             &:hover {
-                color: $faded_text;
+                color: $theme_background;
             }
         }
     }
@@ -93,13 +95,13 @@ nav {
             gap: 2rem;
 
             a {
-                color: $faded_text;
+                color: $text_color;
                 font-size: 1.2rem;
 
                 &:hover {
-                    color: $link_color;
+                    color: $theme_color;
                     text-decoration: underline;
-                    text-decoration-color: $link_color;
+                    text-decoration-color: $theme_color;
                     text-decoration-thickness: 2px;
                     text-underline-offset: 0.8rem;
                 }

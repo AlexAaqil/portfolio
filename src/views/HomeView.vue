@@ -1,11 +1,11 @@
 <template>
-  <NavbarComponent />
+	<NavbarComponent />
 
-  <main class="HomePage">
-    <HomePage />
-  </main>
+	<main class="HomePage">
+		<HomePage />
+	</main>
 
-  <FooterComponent />
+	<FooterComponent />
 </template>
 
 <script>
@@ -15,12 +15,12 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
-  name: "HomeView",
+	name: "HomeView",
 
-  components: {
-    HomePage,
-    NavbarComponent,
-    FooterComponent,
-  },
+	components: {
+		HomePage,
+		NavbarComponent,
+		FooterComponent,
+	},
 };
 </script>

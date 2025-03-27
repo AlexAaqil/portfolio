@@ -6,8 +6,8 @@ button,
     font-size: 1rem;
     letter-spacing: 0.28px;
     font-weight: bold;
-    background: $element_background;
-    color: $element_color;
+    background: $theme_color;
+    color: #fff;
     margin: 1em 0;
     transition: 0.3s ease-in-out;
     text-align: center;
@@ -20,7 +20,7 @@ button,
     }
 }
 
-.btn {
+.btn_transparent {
     background: transparent;
     color: $element_background;
     border: 1px solid $element_background;
