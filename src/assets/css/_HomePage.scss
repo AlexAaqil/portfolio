@@ -60,10 +60,6 @@
                 display: grid;
                 gap: 2em;
 
-                img {
-                    border-radius: 8px;
-                }
-
                 .stats {
                     display: flex;
                     gap: 2em;
@@ -103,7 +99,6 @@
 
                         img {
                             object-fit: cover;
-                            border-radius: 8px;
                         }
                     }
 

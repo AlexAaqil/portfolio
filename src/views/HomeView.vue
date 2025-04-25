@@ -9,7 +9,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import HomePage from "@/components/HomepageComponent.vue";
 import NavbarComponent from "@/components/NavbarComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";

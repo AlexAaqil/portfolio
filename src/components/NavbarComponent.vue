@@ -1,21 +1,20 @@
 <template>
 	<nav :class="{ dark: isDarkMode }">
 		<div class="brand">
-			<a href="/">
+			<RouterLink to="/">
 				<img
 					src="../../public/alex-aaqil-logo.png"
 					alt="Logo"
 					width="40"
 					height="40"
 				/>
-			</a>
+			</RouterLink>
 		</div>
 
 		<!-- Navigation Links -->
 		<div class="links" :class="{ show: isNavOpen }">
-			<!-- <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link> -->
-			<a href="#about">About</a>
+			<router-link to="/">Home</router-link>
+			<router-link to="/about">About</router-link>
 			<a href="#projects">Projects</a>
 			<a href="#experience">Experience</a>
 		</div>
