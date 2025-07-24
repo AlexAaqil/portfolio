@@ -1,0 +1,41 @@
+---
+import '../css/globals.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const hasHead = !!Astro.slots.head;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		{
+			hasHead
+			? <slot name="head" />
+			: <title>Alex Aaqil | Software Engineer</title>
+		}
+	</head>
+
+	<body>
+		<Navbar />
+
+		<slot />
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	*,
+	html {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: sans-serif, arial;
+	}
+</style>

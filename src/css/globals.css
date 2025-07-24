@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+.container {
+    @apply px-2 py-12;
+}
