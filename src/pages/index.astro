@@ -1,5 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import heroImage from '../assets/alex-aaqil-profile-photo.png';
+import SocialLinks from '../components/SocialLinks.astro';
+import EyeIcon from '../components/svgs/eye.astro';
+import lake_elementaita_manor from '../assets/projects/lake-elementaita-manor.webp';
+import shea254 from '../assets/projects/shea254.png';
+import qing_jia_safaris from '../assets/projects/qing-jia-safaris.png';
+import optima from '../assets/projects/optima.png';
+
+const whatsapp_message = encodeURIComponent("Hi Alex, I'd like to make an inquiry.");
+const whatsapp_url = `https://wa.me/254746055487?text=${whatsapp_message}`;
 ---
 
 <Layout>
@@ -12,7 +22,148 @@ import Layout from '../layouts/Layout.astro';
 
 	<div class="HomePage">
 		<section class="Hero">
-			<h1>Testing Run</h1>
+			<div class="container">
+				<div class="content">
+					<h1>Alex Aaqil</h1>
+					<p>Empowering businesses with tailored software solutions</p>
+
+					<div class="hero_btn">
+						<a href={whatsapp_url} target="_blank" rel="noopener noreferer">Get a Free Consultation</a>
+					</div>
+
+					<SocialLinks />
+				</div>
+
+				<div class="image">
+					<img src={heroImage.src} alt="Alex Aaqil Photo">
+				</div>
+			</div>
+		</section>
+
+		<section class="Projects">
+			<div class="container">
+				<div class="section_header">
+					<p>some of my</p>
+					<h2>Projects</h2>
+				</div>
+
+				<div class="projects">
+					<div class="project">
+						<div class="image">
+							<img src={qing_jia_safaris.src} alt="Qing Jia Safaris">
+						</div>
+
+						<div class="content">
+							<p class="tags">
+								<span>tours booking MS</span>
+								<span>company website</span>
+							</p>
+							<p class="title">Qing Jia Safaris</p>
+
+							<div class="actions">
+								<a href="https://qingjiasafaris.com" target="_blank">
+									<EyeIcon />
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project">
+						<div class="image">
+							<img src={shea254.src} alt="Shea254">
+						</div>
+
+						<div class="content">
+							<p class="tags">
+								<span>e-commerce</span>
+							</p>
+							<p class="title">Shea254</p>
+
+							<div class="actions">
+								<a href="https://shea254.com" target="_blank">
+									<EyeIcon />
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project">
+						<div class="image">
+							<img src={lake_elementaita_manor.src} alt="Lake Elementaita Manor">
+						</div>
+
+						<div class="content">
+							<p class="tags">
+								<span>company website</span>
+							</p>
+							<p class="title">Lake Elementaita Manor</p>
+
+							<div class="actions">
+								<a href="https://lakeelementaitamanor.netlify.app" target="_blank">
+									<EyeIcon />
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project">
+						<div class="image">
+							<img src={optima.src} alt="Optima">
+						</div>
+
+						<div class="content">
+							<p class="tags">
+								<span>school MS</span>
+							</p>
+							<p class="title">Optima</p>
+
+							<div class="actions">
+								<a href="https://hsms.bolombametals.com/" target="_blank">
+									<EyeIcon />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="Experiences">
+			<div class="container">
+				<div class="section_header">
+					<p>my preffered</p>
+					<h2>Tools of Work</h2>
+				</div>
+
+				<div class="experiences">
+					<div class="experience">
+						<p class="title">Frontend Development</p>
+						<ul>
+							<li>HTML</li>
+							<li>CSS (Tailwindcss, Sass)</li>
+							<li>JavaScript (TypeScript)</li>
+						</ul>
+					</div>
+
+					<div class="experience">
+						<p class="title">Backend Development</p>
+						<ul>
+							<li>PHP (Laravel)</li>
+							<li>Python (Django, Flask)</li>
+							<li>Databases (MySQL)</li>
+						</ul>
+					</div>
+
+					<div class="experience">
+						<p class="title">Additional Skills</p>
+						<ul>
+							<li>Version Control (Git)</li>
+							<li>SEO</li>
+							<li>Graphic Design (Adobe Illustrator, Photoshop)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</section>
 	</div>
 </Layout>

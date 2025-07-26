@@ -8,5 +8,25 @@
 }
 
 .container {
-    @apply px-2 py-12;
+    @apply px-2 lg:px-8 py-4 mx-auto;
 }
+
+.image,
+img {
+    @apply rounded-lg;
+}
+.image {
+    img {
+        @apply w-full h-full object-cover;
+    }
+}
+
+.SocialLinks {
+    @apply flex gap-4;
+}
+
+@import './components/buttons.css';
+@import './components/navbar.css';
+@import './components/footer.css';
+
+@import "./HomePage.css";

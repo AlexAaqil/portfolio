@@ -1,0 +1,107 @@
+.HomePage {
+    section {
+        &:not(:first-of-type) {
+            @apply py-12 lg:py-16;
+        }
+
+        .section_header {
+            @apply text-center space-y-1 mb-12;
+
+            h2 {
+                @apply font-bold text-4xl;
+            }
+        }
+    }
+
+    .Hero {
+        .container {
+            @apply lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center;
+
+            .content {
+                @apply space-y-4;
+
+                h1 {
+                    @apply font-bold text-8xl;
+                }
+
+                p {
+                    @apply text-xl;
+                }
+
+                .hero_btn {
+                    @apply my-6;
+
+                    a {
+                        @apply bg-green-600 text-white font-semibold tracking-wide py-4 px-4 rounded-lg;
+                    }
+                }
+
+                .SocialLinks {
+                    @apply mt-8;
+                }
+            }
+        }
+
+        .image {
+            @apply lg:h-[500px];
+
+            img {
+                @apply object-contain;
+            }
+        }
+    }
+
+    .Projects {
+        .container {
+            .projects {
+                @apply grid grid-cols-1 lg:grid-cols-4 gap-8;
+
+                .project {
+                    .image {
+                        @apply h-[400px];
+                    }
+
+                    .content {
+                        @apply px-2 py-2 space-y-1;
+
+                        .title {
+                            @apply font-bold text-lg;
+                        }
+
+                        .tags {
+                            @apply flex gap-4;
+
+                            span {
+                                @apply text-sm text-gray-700 bg-slate-50 py-1 px-2 rounded-lg;
+                            }
+                        }
+
+                        .actions {
+                            svg {
+                                @apply w-5 h-5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Experiences {
+        .experiences {
+            @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+
+            .experience {
+                @apply justify-self-center;
+
+                .title {
+                    @apply font-bold text-lg mb-2;
+                }
+
+                ul {
+                    @apply list-disc list-outside md:list-inside;
+                }
+            }
+        }
+    }
+}
