@@ -1,3 +1,21 @@
 nav {
     @apply bg-gray-900 text-white;
+
+    .container {
+        @apply flex justify-between items-center;
+
+        .branding {
+            .title {
+                @apply font-bold text-xl;
+            }
+        }
+
+        .links {
+            @apply flex gap-8;
+
+            a {
+                @apply font-semibold;
+            }
+        }
+    }
 }
