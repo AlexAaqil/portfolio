@@ -1,4 +1,7 @@
-# Astro Starter Kit: Basics
+# Person Portfolio Website
+Personal portfolio website made using astro.
+
+## Astro Starter Kit: Basics
 
 ```sh
 npm create astro@latest -- --template basics
