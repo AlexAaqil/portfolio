@@ -1,11 +1,11 @@
 footer {
-    @apply bg-gray-900 text-white;
+    @apply bg-[var(--bg_color)] text-[var(--text_color)];
 
     .container {
         @apply pb-0;
 
         .footer_content {
-            @apply grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 py-12 mb-4;
+            @apply grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 py-12 mb-4 border-t-1 border-neutral-900;
 
             .branding {
                 @apply space-y-1;
@@ -53,14 +53,14 @@ footer {
                     @apply mt-6;
 
                     a {
-                        @apply py-4 px-8 tracking-wide bg-white text-gray-900 rounded-lg;
+                        @apply py-4 px-8 tracking-wide bg-[var(--theme_bg)] text-[var(--text_color)] rounded-lg;
                     }
                 }
             }
         }
 
         .copyright {
-            @apply text-center border-t-1 border-gray-600 py-4;
+            @apply text-center border-t-1 border-neutral-900 py-4;
         }
     }
 }

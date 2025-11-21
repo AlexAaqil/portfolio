@@ -8,7 +8,7 @@
             @apply text-center space-y-1 mb-12;
 
             h2 {
-                @apply font-bold text-4xl;
+                @apply font-bold text-4xl text-[var(--theme_bg)];
             }
         }
     }
@@ -32,12 +32,16 @@
                     @apply my-6;
 
                     a {
-                        @apply bg-green-600 text-white font-semibold tracking-wide py-4 px-4 rounded-lg;
+                        @apply bg-[var(--theme_bg)] text-white font-semibold tracking-wide py-4 px-4 rounded-lg;
                     }
                 }
 
                 .SocialLinks {
                     @apply mt-8;
+
+                    svg {
+                        @apply fill-white;
+                    }
                 }
             }
         }
@@ -54,11 +58,15 @@
     .Projects {
         .container {
             .projects {
-                @apply grid grid-cols-1 lg:grid-cols-4 gap-8;
+                @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
 
                 .project {
                     .image {
                         @apply h-[400px];
+
+                        img {
+                            @apply object-top;
+                        }
                     }
 
                     .content {
@@ -72,13 +80,7 @@
                             @apply flex gap-4;
 
                             span {
-                                @apply text-sm text-gray-700 bg-slate-50 py-1 px-2 rounded-lg;
-                            }
-                        }
-
-                        .actions {
-                            svg {
-                                @apply w-5 h-5;
+                                @apply text-xs text-gray-200 py-1;
                             }
                         }
                     }

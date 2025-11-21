@@ -2,11 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import heroImage from '../assets/alex-aaqil-profile-photo.png';
 import SocialLinks from '../components/SocialLinks.astro';
-import EyeIcon from '../components/svgs/eye.astro';
-import lake_elementaita_manor from '../assets/projects/lake-elementaita-manor.webp';
 import shea254 from '../assets/projects/shea254.png';
 import qing_jia_safaris from '../assets/projects/qing-jia-safaris.png';
-import optima from '../assets/projects/optima.png';
+import simian_safaris from '../assets/projects/simian-safaris.png';
 
 const whatsapp_message = encodeURIComponent("Hi Alex, I'd like to make an inquiry.");
 const whatsapp_url = `https://wa.me/254746055487?text=${whatsapp_message}`;
@@ -50,6 +48,20 @@ const whatsapp_url = `https://wa.me/254746055487?text=${whatsapp_message}`;
 				<div class="projects">
 					<div class="project">
 						<div class="image">
+							<img src={simian_safaris.src} alt="Simian Safaris">
+						</div>
+
+						<div class="content">
+							<p class="tags">
+								<span>tours booking MS</span>
+								<span>company website</span>
+							</p>
+							<p class="title"><a href="https://simiansafaris.com" target="_blank">Simian Safaris</a></p>
+						</div>
+					</div>
+
+					<div class="project">
+						<div class="image">
 							<img src={qing_jia_safaris.src} alt="Qing Jia Safaris">
 						</div>
 
@@ -58,13 +70,7 @@ const whatsapp_url = `https://wa.me/254746055487?text=${whatsapp_message}`;
 								<span>tours booking MS</span>
 								<span>company website</span>
 							</p>
-							<p class="title">Qing Jia Safaris</p>
-
-							<div class="actions">
-								<a href="https://qingjiasafaris.com" target="_blank">
-									<EyeIcon />
-								</a>
-							</div>
+							<p class="title"><a href="https://qingjiasafaris.com" target="_blank">Qing Jia Safaris</a></p>
 						</div>
 					</div>
 
@@ -77,51 +83,7 @@ const whatsapp_url = `https://wa.me/254746055487?text=${whatsapp_message}`;
 							<p class="tags">
 								<span>e-commerce</span>
 							</p>
-							<p class="title">Shea254</p>
-
-							<div class="actions">
-								<a href="https://shea254.com" target="_blank">
-									<EyeIcon />
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="project">
-						<div class="image">
-							<img src={lake_elementaita_manor.src} alt="Lake Elementaita Manor">
-						</div>
-
-						<div class="content">
-							<p class="tags">
-								<span>company website</span>
-							</p>
-							<p class="title">Lake Elementaita Manor</p>
-
-							<div class="actions">
-								<a href="https://lakeelementaitamanor.netlify.app" target="_blank">
-									<EyeIcon />
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="project">
-						<div class="image">
-							<img src={optima.src} alt="Optima">
-						</div>
-
-						<div class="content">
-							<p class="tags">
-								<span>school MS</span>
-							</p>
-							<p class="title">Optima</p>
-
-							<div class="actions">
-								<a href="https://hsms.bolombametals.com/" target="_blank">
-									<EyeIcon />
-								</a>
-							</div>
+							<p class="title"><a href="https://shea254.com" target="_blank">Shea254</a></p>
 						</div>
 					</div>
 				</div>
