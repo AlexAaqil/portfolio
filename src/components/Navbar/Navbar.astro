@@ -1,0 +1,50 @@
+---
+// Get current path for active link highlighting
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="site-nav">
+  <div class="nav-container-fluid">
+    <div class="nav-branding">
+      <a href="/" class="nav-logo">Alex Aaqil</a>
+    </div>
+
+    <button 
+      class="mobile-menu-btn" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      data-mobile-menu-btn
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="nav-links" data-nav-links>
+      <a href="/" class:list={[{ 'nav-link': true, 'active': currentPath === '/' }]}>
+        Home
+      </a>
+      <a href="/services" class:list={[{ 'nav-link': true, 'active': currentPath === '/services' }]}>
+        Services
+      </a>
+      <a href="/projects" class:list={[{ 'nav-link': true, 'active': currentPath === '/projects' }]}>
+        Projects
+      </a>
+      <a href="/about" class:list={[{ 'nav-link': true, 'active': currentPath === '/about' }]}>
+        About
+      </a>
+      <a href="/contact" class:list={[{ 'nav-link': true, 'active': currentPath === '/contact' }]}>
+        Contact
+      </a>
+      <a href="/blogs" class:list={[{ 'nav-link': true, 'active': currentPath === '/blogs' }]}>
+        Blogs
+      </a>
+
+      <a href="/contact" class="nav-cta">Hire me &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  import './nav.js';
+</script>

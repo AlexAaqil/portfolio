@@ -1,0 +1,90 @@
+---
+import '../css/globals.css';
+import Navbar from '../components/Navbar/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const hasHead = !!Astro.slots.head;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+
+		<!-- Viewport for mobile optimization -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/svg+xml" href="./aaqilify-logo.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+
+		{
+			hasHead
+			? <slot name="head" />
+			: <title>Alex Aaqil | Software Engineer</title>
+		}
+	</head>
+
+	<body class="MainLayoutBody">
+		<!-- Custom cursor -->
+		<div class="cursor" id="cursor"></div>
+		<div class="cursor-ring" id="cursor-ring"></div>
+
+		<Navbar />
+
+        <main class="MainLayout">            
+            <slot />
+        </main>
+        
+        <Footer />
+
+		<script>
+			/* Custom cursor */
+			const cur = document.getElementById('cursor');
+			const ring = document.getElementById('cursor-ring');
+			let rx = 0, ry = 0;
+			document.addEventListener('mousemove', e => {
+				cur?.style?.setProperty('left', e.clientX + 'px');
+				cur?.style?.setProperty('top', e.clientY + 'px');
+				setTimeout(() => {
+					ring?.style?.setProperty('left', e.clientX + 'px');
+					ring?.style?.setProperty('top', e.clientY + 'px');
+				}, 60);
+			});
+
+			/* Scroll fade-in */
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+					}
+				});
+			}, { threshold: 0.12 });
+
+			document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+			/* Nav scroll effect */
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (nav) {
+                    nav.style.borderBottomColor = window.scrollY > 60
+                        ? 'rgba(255,255,255,0.1)'
+                        : 'rgba(255,255,255,0.07)';
+                }
+            });
+		</script>
+	</body>
+</html>
+
+<style>
+	*,
+	html {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: sans-serif, arial;
+	}
+</style>

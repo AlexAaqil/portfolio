@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Hero from './homepage/components/Hero.astro';
+import Ticker from './homepage/components/Ticker.astro';
+import Services from './homepage/components/Services.astro';
+import Projects from './homepage/components/Projects.astro';
+import Process from './homepage/components/Process.astro';
+import Contact from './homepage/components/Contact.astro';
+
+import hero_image from '../assets/alex-aaqil-profile-photo.png';
+---
+
+<Layout>
+	<Fragment slot="head">
+		<title>Alex Aaqil — Full-Stack Software Engineer</title>
+		<meta name="description" content="Full-stack software engineer based in Nairobi. Building web applications, business systems, and digital products for clients across East Africa and internationally." />
+
+		<!-- Open Graph tags for social sharing -->
+		<meta property="og:title" content="Alex Aaqil — Full-Stack Software Engineer" />
+		<meta property="og:description" content="Building web applications and digital products for clients across East Africa and beyond." />
+		<meta property="og:type" content="website" />
+		<link rel="canonical" href="https://alexaaqil.netlify.app"/>
+		<meta property="og:image" content={hero_image.src} />
+		
+		<!-- Twitter Card tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Alex Aaqil | Software Engineer" />
+		<meta name="twitter:description" content="Empowering businesses with tailored software solutions." />
+		<meta name="twitter:image" content={hero_image.src} />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://alexaaqil.netlify.app" />
+		
+		<!-- Robots meta tag (more specific) -->
+		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Alex Aaqil",
+			"jobTitle": "Full-Stack Software Engineer",
+			"url": "https://alexaaqil.netlify.app",
+			"sameAs": [
+				"https://linkedin.com/in/alexaaqil",
+				"https://github.com/alexaaqil"
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Nairobi",
+				"addressCountry": "KE"
+			}
+		}
+		</script>
+	</Fragment>
+
+	<div class="HomePage">
+		<Hero />
+
+        <Ticker />
+
+        <Services />
+
+		<Projects />
+
+        <Process />
+
+		<Contact />
+	</div>
+</Layout>

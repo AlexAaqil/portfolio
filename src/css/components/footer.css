@@ -1,0 +1,31 @@
+footer {
+    @apply border-t border-(--border) py-[40px] px-[0] bg-(--bg);
+
+    .container-fluid {
+        @apply flex items-center justify-between gap-[20px] flex-wrap;
+
+        .branding {
+            font-family: var(--font-display);
+            text-decoration: none;
+            @apply font-[700] text-(--text);
+        }
+
+        .quick_links {
+            @apply flex gap-[28px];
+
+            a {
+                @apply text-[12px] text-(--text-3);
+                text-decoration: none;
+                transition: color 0.2s;
+
+                &:hover {
+                    @apply text-(--text-2);
+                }
+            }
+        }
+
+        .copyright {
+            @apply text-[12px] text-(--text-3);
+        }
+    }
+}

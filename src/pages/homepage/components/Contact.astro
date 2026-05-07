@@ -1,0 +1,189 @@
+---
+import contact_us_image from "../assets/contact-us.png";
+
+const whatsapp_message = encodeURIComponent(
+  "Hi Alex, I'd like to make an inquiry.",
+);
+const whatsapp_url = `https://wa.me/254746055487?text=${whatsapp_message}`;
+---
+
+<section class="Contact">
+  <div class="container-fluid">
+    <div class="content fade-in">
+      <div class="section-header">
+        <div class="eyebrow">Get In Touch</div>
+        <h2 class="title">Let's build something together</h2>
+        <p
+          style="font-size:16px;color:var(--text-2);line-height:1.75;margin-top:16px;max-width:380px;"
+        >
+          Whether you have a defined brief or just an idea, I'm happy to talk
+          through what's possible. I typically respond within 24 hours.
+        </p>
+      </div>
+
+      <div class="contact-channels">
+        <a href="mailto:alexaaqil.se@gmail.com" class="channel-item">
+          <div class="channel-icon">✉</div>
+          <div>
+            <div class="channel-label">Email</div>
+            <div class="channel-value">alexaaqil.se@gmail.com</div>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+        <a
+          href="https://wa.me/254746055487"
+          target="_blank"
+          class="channel-item"
+        >
+          <div class="channel-icon">💬</div>
+          <div>
+            <div class="channel-label">WhatsApp</div>
+            <div class="channel-value">+254 746 055 487</div>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+        <a
+          href="https://linkedin.com/in/alexaaqil"
+          target="_blank"
+          class="channel-item"
+        >
+          <div class="channel-icon">in</div>
+          <div>
+            <div class="channel-label">LinkedIn</div>
+            <div class="channel-value">linkedin.com/in/alexaaqil</div>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+        <a
+          href="https://github.com/alexaaqil"
+          target="_blank"
+          class="channel-item"
+        >
+          <div class="channel-icon">&lt;/&gt;</div>
+          <div>
+            <div class="channel-label">GitHub</div>
+            <div class="channel-value">github.com/alexaaqil</div>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrapper fade-in default-fade-in-delay">
+        <form id="contact-form" class="contact-form">
+    <div class="inputs-group-wrapper">
+        <div class="inputs-group">
+            <label class="form-label">Name</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="Your name" required/>
+        </div>
+
+        <div class="inputs-group">
+            <label class="form-label">Email</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="your@email.com" required/>
+        </div>
+    </div>
+
+    <div class="inputs-group">
+        <label class="form-label">Project type</label>
+        <select id="contact-project-type" class="form-select">
+            <option value="" disabled selected>Select a service</option>
+            <option>Custom website</option>
+            <option>Web application</option>
+            <option>Business management system</option>
+            <option>E-commerce platform</option>
+            <option>Branding & design</option>
+            <option>Other / not sure yet</option>
+        </select>
+    </div>
+
+    <div class="inputs-group">
+        <label class="form-label">Budget range (USD)</label>
+        <select id="contact-budget" class="form-select">
+            <option value="" disabled selected>Select a range</option>
+            <option>Under $500</option>
+            <option>$500 – $1,500</option>
+            <option>$1,500 – $5,000</option>
+            <option>$5,000 – $15,000</option>
+            <option>$15,000+</option>
+            <option>Not sure yet</option>
+        </select>
+    </div>
+
+    <div class="inputs-group">
+        <label class="form-label">Tell me about your project</label>
+        <textarea id="contact-message" class="form-textarea" placeholder="What are you building? What's the problem you're solving?"></textarea>
+    </div>
+    
+    <button type="submit" class="form-submit">
+        Send message
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <div id="form-msg" style="display:none;font-size:13px;color:#6BE995;margin-top:4px;">Message sent — I'll reply within 24 hours.</div>
+</form>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get values with proper type casting
+      const name = (document.getElementById('contact-name') as HTMLInputElement)?.value || '';
+      const email = (document.getElementById('contact-email') as HTMLInputElement)?.value || '';
+      const projectType = (document.getElementById('contact-project-type') as HTMLSelectElement)?.value || '';
+      const budget = (document.getElementById('contact-budget') as HTMLSelectElement)?.value || '';
+      const message = (document.getElementById('contact-message') as HTMLTextAreaElement)?.value || '';
+      
+      if (!name || !email) {
+        const msg = document.getElementById('form-msg');
+        if (msg) {
+          msg.textContent = 'Please fill in your name and email.';
+          (msg as HTMLDivElement).style.color = '#FF6B5B';
+          (msg as HTMLDivElement).style.display = 'block';
+          setTimeout(() => {
+            if (msg) (msg as HTMLDivElement).style.display = 'none';
+          }, 3000);
+        }
+        return;
+      }
+      
+      const phoneNumber = '254746055487';
+      const whatsappMessage = `*New Inquiry from Portfolio Website*\n\n*Name:* ${name}\n*Email:* ${email}\n*Project Type:* ${projectType}\n*Budget Range:* ${budget}\n*Message:* ${message || 'No message provided'}`;
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+      
+      const msg = document.getElementById('form-msg');
+      const btn = form.querySelector('.form-submit');
+      const originalBtnText = btn?.textContent || 'Send message';
+      
+      if (btn) {
+        (btn as HTMLButtonElement).textContent = 'Opening WhatsApp...';
+        (btn as HTMLButtonElement).disabled = true;
+      }
+      
+      window.open(whatsappURL, '_blank');
+      
+      setTimeout(() => {
+        if (msg) (msg as HTMLDivElement).style.display = 'block';
+        if (btn) {
+          (btn as HTMLButtonElement).textContent = 'Sent ✓';
+          (btn as HTMLButtonElement).style.background = '#6BE995';
+        }
+        (form as HTMLFormElement).reset();
+        
+        setTimeout(() => {
+          if (btn) {
+            (btn as HTMLButtonElement).textContent = originalBtnText;
+            (btn as HTMLButtonElement).style.background = '';
+            (btn as HTMLButtonElement).disabled = false;
+          }
+          if (msg) (msg as HTMLDivElement).style.display = 'none';
+        }, 3000);
+      }, 1000);
+    });
+  });
+</script>

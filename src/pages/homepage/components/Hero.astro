@@ -1,0 +1,85 @@
+---
+import hero_image from '../../../assets/alex-aaqil-profile-photo.png';
+---
+
+<section class="Hero">
+    <div class="hero-bg"></div>
+    <div class="container-fluid">
+        <div class="hero-wrapper">
+            <div class="hero-text">
+                <div class="hero-eyebrow">Based in Nairobi, Kenya · Available for remote work</div>
+                <h1 class="hero-title">
+                    <span class="line-dim">Full-Stack</span>
+                    <br>Software<br>
+                    <span class="line-accent">Engineer.</span>
+                </h1>
+                <p class="hero-description">
+                    I build web applications, business management systems, and digital products that help companies operate better — for clients in East Africa and internationally.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="/projects" class="btn-primary">
+                        View my work
+                        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="/contact" class="btn-secondary">
+                        Let's talk
+                        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-card fade-in">
+                <div class="card-header">
+                    <div class="hero-image">
+                        <img 
+                            src={hero_image.src} 
+                            alt="Alex Aaqil Photo"
+                            loading="eager"
+                        />
+                    </div>
+
+                    <div class="available-badge">
+                        <div class="dot"></div>
+                        Available for hire
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="number">10<span>+</span></div>
+                        <div class="label">Live client projects</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="number">4<span>+</span></div>
+                        <div class="label">Years building</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="number">6</div>
+                        <div class="label">Industries served</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="number">∞</div>
+                        <div class="label">Remote-ready</div>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group-label">Core stack</div>
+                    <div class="skills">
+                        <span>Laravel</span>
+                        <span>Vue.js</span>
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>PostgreSQL</span>
+                        <span>Tailwind</span>
+                        <span>TypeScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+---
+import SocialLinks from "./SocialLinks.astro";
+
+const whatsapp_message = encodeURIComponent("Hi Alex, I'm interested in collaborating on a project.");
+const whatsapp_url = `https://wa.me/254746055487?text=${whatsapp_message}`;
+---
+
+<footer>
+    <div class="container-fluid">
+        <div class="branding">Alex Aaqil</div>
+
+        <div class="quick_links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+        <div class="copyright">copyright &copy; {new Date().getFullYear()} Alex Aaqil</div>
+    </div>
+</footer>

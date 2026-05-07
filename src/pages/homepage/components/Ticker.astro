@@ -1,0 +1,32 @@
+---
+const tickerItems = [
+  "Web Development",
+  "Business Systems",
+  "E-Commerce",
+  "Branding & Design",
+  "Software Engineering",
+  "Remote-Ready",
+  "East Africa & International",
+];
+---
+
+<section class="Ticker">
+	<div class="ticker-wrapper" aria-hidden="true">
+		<div class="ticker-inner">
+			{tickerItems.map(item => (
+				<div class="ticker-item">
+					{item} <span class="ticker-dot"></span>
+				</div>
+			))}
+
+			{/* Duplicate for seamless loop - MUST be separate divs */}
+			{tickerItems.map(item => (
+				<div class="ticker-item" aria-hidden="true">
+					{item}
+					<span class="ticker-dot"></span>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+

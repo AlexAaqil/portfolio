@@ -1,0 +1,51 @@
+---
+const services = [
+    {
+        "id": "01",
+        "icon": "⚡",
+        "title": "Custom Web Development",
+        "description": "High-performance websites and web apps tailored to your brand. Designed to convert visitors and drive measurable business growth.",
+        "tags": ["Astro", "Vue.js", "Tailwind", "Laravel"]
+    },
+    {
+        "id": "02",
+        "icon": "🛠",
+        "title": "Business Management Systems",
+        "description": "Custom web applications that streamline operations, automate workflows, and give you full control over your business processes.",
+        "tags": ["Laravel", "Django", "PostgreSQL", "REST APIs"]
+    },
+    {
+        "id": "03",
+        "icon": "🎨",
+        "title": "Branding & Visual Design",
+        "description": "Strategic visual identity that communicates your brand's value, builds trust, and creates a lasting impression across all platforms.",
+        "tags": ["Illustrator", "Photoshop", "UI Design", "Brand Systems"]
+    },
+];
+---
+
+<section class="Services" id="services">
+  <div class="container-fluid">
+    <div class="section-header">
+        <div class="eyebrow fade-in">What I do</div>
+        <h2 class="title fade-in">Services built<br>for results</h2>
+        <p class="sub-title fade-in">From concept to deployment, I handle the full stack — engineering and design — so you work with one person, not a committee.</p>
+    </div>
+
+    <div class="services-wrapper">
+        {services.map(service => (
+            <div class="service fade-in" style="transition-delay:0.2s">
+                <div class="number">{service.id}</div>
+                <div class="icon">{service.icon}</div>
+                <div class="name">{service.title}</div>
+                <p class="description">{service.description}</p>
+                <div class="tags">
+                    {service.tags.map(tag => (
+                        <span>{tag}</span>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+  </div>
+</section>

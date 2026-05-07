@@ -1,0 +1,58 @@
+---
+import { getFeaturedProjects } from '../../../data/projects.ts';
+const featuredProjects = getFeaturedProjects(3);
+---
+
+<section class="Projects">
+  <div class="container-fluid">
+    <div class="section-header">
+        <div class="eyebrow fade-in">Selected work</div>
+        <h2 class="title fade-in">Projects that<br>ship and perform</h2>
+        <p class="sub-title fade-in">Every project is a full end-to-end engagement — from wireframes to launch. Here's a selection of live client work.</p>
+    </div>
+
+    <div class="projects-wrapper">
+        {featuredProjects.map(project => (
+            <div class="project">
+                <div class="project-content">
+                    <div class="index">{project.id}</div>
+                    <div class="tags">
+                        {project.tags.map(tag => (
+                            <span class="tag">{tag}</span>
+                        ))}
+                    </div>
+                    <h3 class="name">{project.name}</h3>
+                    <p class="description">{project.description}</p>
+                    <div class="technologies">
+                        {project.technologies.map(technology => (
+                            <span class="technology">{technology}</span>
+                        ))}
+                    </div>
+                    <div class="result">
+                        {project.result.map(result => (
+                            <>
+                                <div class="label">{result.label}</div>
+                                <div class="text">{result.text}</div>
+                            </>
+                        ))}
+                    </div>
+                    <div class="links" style="margin-top:28px;">
+                        <a href="https://simiansafaris.com" target="_blank" class="link live">
+                        View live site
+                        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-preview">
+                    <img src={project.image.src} alt={project.name} loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+                    <div class="placeholder" style="position:absolute;inset:0;z-index:-1">
+                        <div class="letters">SS</div>
+                        <div class="url">{project.preview_url}</div>
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+  </div>
+</section>

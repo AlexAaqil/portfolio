@@ -1,0 +1,71 @@
+.HomePage,
+.AboutPage,
+.ProjectsPage {
+    section {
+        @apply py-16;
+        
+        .section-header {
+            .eyebrow {
+                @apply text-[12px] tracking-wider uppercase text-(--accent) font-[500] flex items-center gap-[10px] mb-[20px];
+
+                &::before {
+                    content: '';
+                    @apply w-[20px] h-[1px] bg-(--accent);
+                }
+            }
+
+            .title {
+                font-family: var(--font-display);
+                font-size: clamp(32px, 4.5vw, 52px);
+                @apply font-[800] leading-[1.05] tracking-[-0.03em] text-(--text) mb-[16px];
+            }
+
+            .sub-title {
+                @apply text-[16px] text-(--text-2) max-w-[520px] leading-[1.75] mb-[60px];
+            }
+        }
+    }
+}
+
+.HomePage,
+.ContactPage {
+    .Contact {
+        @apply bg-(--theme-bg) text-(--theme-bg-text);
+
+        .container-fluid-fluid {
+            @apply px-2 grid lg:grid-cols-2 lg:items-center gap-8;
+
+            .contact-image {
+                @apply h-[300px] lg:h-[400px];
+
+                img {
+                    @apply object-contain w-full h-full;
+                }
+            }
+
+            .contact-content {
+                @apply space-y-2;
+
+                h2 {
+                    @apply font-semibold text-4xl;
+                }
+
+                p {
+                    @apply text-lg font-semibold;
+                }
+
+                .button {
+                    @apply mt-12;
+
+                    a {
+                        @apply bg-(--bg-color) text-(--text-color) py-4 px-8 rounded-lg text-lg font-semibold tracking-wider;
+                    }
+                }
+            }
+        }
+    }
+}
+@import './HomePage';
+@import './AboutPage';
+
+@import './BlogsPages';

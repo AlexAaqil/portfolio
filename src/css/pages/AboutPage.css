@@ -1,0 +1,79 @@
+.AboutPage {
+    .About {
+        .container-fluid {
+            .about-wrapper {
+                @apply grid lg:grid-cols-2 gap-[80px] items-start;
+
+                .about-image {
+                    @apply relative;
+
+                    .about-image-wrapper {
+                        @apply relative rounded-[16px] overflow-hidden bg-(--surface) max-h-[500px];
+                        aspect-ratio: 3/4;
+
+                        img {
+                            @apply w-full h-full object-cover;
+                            object-position: top;
+                            filter: grayscale(20%);
+                        }
+
+                        .placeholder {
+                            @apply w-full h-full flex items-center justify-center font-(--font-display) text-[80px] font-[800] text-(--text-3);
+                        }
+                    }
+
+                    .about-badge {
+                        @apply absolute bottom-[24px] left-[-20px] bg-(--surface) border border-(--border) py-[14px] px-[20px] rounded-[12px] min-w-[160px];
+
+                        .number {
+                            @apply font-(--font-display) text-[28px] font-[800] text-(--accent) tracking-[-0.03em] leading-[1] mb-[3px];
+                        }
+
+                        .label {
+                            @apply text-[12px] text-(--text-3);
+                        }
+                    }
+                }
+
+                .about-content {
+                    transition-delay: 0.1s;
+
+                    .about-text {
+                        p {
+                            @apply text-(--text-2) leading-[1.8] mb-[20px];
+
+                            &:last-of-type {
+                                @apply mb-[36px];
+                            }
+                        }
+                    }
+
+                    .skills-wrapper {
+                        @apply mt-[40px];
+
+                        .skills-group {
+                            @apply mt-[28px];
+
+                            .group-label {
+                                @apply text-[11px] tracking-[0.1em] uppercase text-(--text-3) font-[500] mb-[12px];
+                            }
+
+                            .skills {
+                                @apply flex flex-wrap gap-[8px];
+
+                                span {
+                                    @apply text-[12px] text-(--text-2) bg-(--surface) border border-(--border) py-[6px] px-[14px] rounded-[8px];
+                                    transition: border-color 0.2s, color 0.2s;
+
+                                    &:hover {
+                                        @apply border-(--accent) text-(--accent);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

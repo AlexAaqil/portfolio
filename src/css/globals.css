@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid rgb(22, 22, 22); */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #0C0C0A;
+    --bg2: #131311;
+    --bg3: #1A1A17;
+    --surface: #1F1F1C;
+    --border: rgba(255,255,255,0.07);
+    --border-hover: rgba(255,255,255,0.14);
+    --text: #F0EFE8;
+    --text-2: #9B9A92;
+    --text-3: #5C5B54;
+    --accent: #C8F55A;
+    --accent-dim: rgba(200, 245, 90, 0.12);
+    --accent-glow: rgba(200, 245, 90, 0.18);
+    --red: #FF6B5B;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --max: 1100px;
+    --radius: 12px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+body.MainLayoutBody {
+    cursor: none;
+}
+
+.container-fluid {
+    @apply px-4 lg:px-[20px] py-4;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.image,
+img {
+    @apply rounded-lg;
+}
+.image {
+    img {
+        @apply w-full h-full object-cover;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: 0.5rem;
+}
+
+.SocialLinks {
+    @apply flex gap-4;
+}
+
+ul.indented,
+ol.indented {
+    list-style: outside;
+    padding: 0 0 0 2rem;
+}
+
+/* ── FADE IN ANIMATION ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.default-fade-in-delay {
+    transition-delay:0.1s
+}
+
+@import './components/index';
+
+@import './pages/index';

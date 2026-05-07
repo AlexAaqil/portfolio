@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import alex_aaqil_image from '../assets/alex-aaqil-profile-photo.png';
+---
+
+<Layout>
+    <Fragment slot="head">
+        <title>About Alex Aaqil</title>
+        <meta name="description" content="Learn more about Alex Aaqil." />
+    </Fragment>
+
+    <div class="AboutPage">
+        <section class="About">
+            <div class="container-fluid">
+                <div class="about-wrapper">
+                    <div class="about-image fade-in">
+                        <div class="about-image-wrapper">
+                            <img 
+                                src={alex_aaqil_image.src} 
+                                alt="Alex Aaqil Photo"
+                                loading="eager"
+                                onerror="this.style.display='none';this.parentNode.innerHTML='<div class=placeholder>AA</div>'"
+                            />
+                        </div>
+                        <div class="about-badge">
+                            <div class="number">4+</div>
+                            <div class="label">Years delivering<br>client projects</div>
+                        </div>
+                    </div>
+
+                    <div class="about-content fade-in">
+                        <div class="section-header">
+                            <div class="eyebrow">About me</div>
+                            <h1 class="title">Engineer.<br>Builder.<br>Collaborator.</h1>
+                        </div>
+
+                        <div class="about-text">
+                            <p>I'm a full-stack software engineer based in Nairobi, Kenya. I build web applications and digital products for businesses that need engineering they can rely on — from early-stage companies in East Africa to clients who work with distributed remote teams internationally.</p>
+                            <p>My work spans custom web development, business management systems, and e-commerce platforms. I'm comfortable owning a project end-to-end: from system architecture and backend APIs through to frontend UI and deployment.</p>
+                            <p>I work asynchronously, communicate clearly, and ship things. If you need a dependable developer who understands both the technical and commercial side of building software, let's talk.</p>
+                        </div>
+
+                        <div class="skills-wrapper">
+                            <div class="skills-group">
+                                <div class="group-label">Frontend</div>
+                                <div class="skills">
+                                    <span>HTML / CSS</span>
+                                    <span>Vue.js</span>
+                                    <span>TypeScript</span>
+                                    <span>Tailwind CSS</span>
+                                    <span>Sass</span>
+                                    <span>Astro</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-group">
+                                <div class="group-label">Backend & Data</div>
+                                <div class="skills">
+                                    <span>Laravel (PHP)</span>
+                                    <span>Python</span>
+                                    <span>Django</span>
+                                    <span>Flask</span>
+                                    <span>PostgreSQL</span>
+                                    <span>MySQL</span>
+                                    <span>REST APIs</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-group">
+                                <div class="group-label">Tools & Design</div>
+                                <div class="skills">
+                                    <span>Git / GitHub</span>
+                                    <span>Figma</span>
+                                    <span>Adobe Illustrator</span>
+                                    <span>Photoshop</span>
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+</Layout>

@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectsSection from './homepage/components/Projects.astro';
+---
+
+<Layout>
+    <Fragment slot="head">
+        <title>Projects by Alex Aaqil</title>
+        <meta name="description" content="View projects by Alex Aaqil." />
+    </Fragment>
+
+    <div class="ProjectsPage HomePage">
+        <ProjectsSection />
+    </div>
+</Layout>
