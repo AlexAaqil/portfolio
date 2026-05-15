@@ -1,0 +1,18 @@
+{
+  "New Blog Post": {
+    "prefix": "blogpost",
+    "body": [
+      "---",
+      "layout: @layouts/BlogLayout.astro",
+      "title: \"${1:Post Title}\"",
+      "date: \"${2:${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}}\"",
+      "categories: [\"${3:category}\"]",
+      "description: \"${4:Post description}\"",
+      "---",
+      "",
+      "${5:Content here...}",
+      "",
+    ],
+    "description": "Create a new blog post"
+  }
+}
