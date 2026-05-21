@@ -10,25 +10,38 @@ const posts = (await getCollection('blogs')).sort(
 ---
 
 <Layout>
-    <main>
+    <main class="BlogsIndexPage">
         <section>
-            <ul>
-                {
-                    posts.map((post) => (
-                        <li>
-                            <a href={`/blogs/${post.id}/`}>
-                                {post.data.heroImage && (
-                                    <Image width={720} height={360} src={post.data.heroImage} alt="" />
-                                )}
-                                <h4 class="title">{post.data.title}</h4>
-                                <p class="date">
-                                    <FormattedDate date={post.data.pubDate} />
-                                </p>
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
+            <div class="container-fluid">
+                <div class="section-header">
+                    <div class="eyebrow">Alex Aaqil's musings</div>
+                    <h1 class="title">Blogs</h1>
+                </div>
+
+                <div class="posts">
+                    {
+                        posts.map((post) => (
+                            <div class="post">
+                                <a href={`/blogs/${post.id}/`}>
+                                    <div class="image">
+                                        {post.data.heroImage && (
+                                            <Image src={post.data.heroImage} alt="" />
+                                        )}
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title">{post.data.title}</h4>
+                                        <p class="description">{post.data.description}</p>
+                                        <p class="date">
+                                            <FormattedDate date={post.data.pubDate} />
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
         </section>
     </main>
 </Layout>

@@ -1,9 +1,10 @@
 .HomePage,
 .AboutPage,
-.ProjectsPage {
+.ProjectsPage,
+.BlogsIndexPage {
     section {
-        @apply py-16;
-        
+        @apply py-4;
+
         .section-header {
             .eyebrow {
                 @apply text-[12px] tracking-wider uppercase text-(--accent) font-[500] flex items-center gap-[10px] mb-[20px];
@@ -68,4 +69,4 @@
 @import './HomePage';
 @import './AboutPage';
 
-@import './BlogsPages';
+@import './Blogs';
