@@ -52,20 +52,22 @@
         }
 
         .content {
-            h2 {
-                @apply mb-2 text-2xl font-semibold;
+            h2,
+            h3,
+            h4 {
+                @apply font-semibold;
 
                 &:not(first-of-type) {
                     @apply mt-8;
                 }
             }
 
-            h3 {
-                @apply text-xl font-semibold;
+            h2 {
+                @apply mb-2 text-2xl;
+            }
 
-                &:not(first-of-type) {
-                    @apply mt-8;
-                }
+            h3 {
+                @apply text-xl;
             }
 
             ul, ol {
