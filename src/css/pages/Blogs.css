@@ -63,7 +63,7 @@
             }
 
             h2 {
-                @apply mb-2 text-2xl;
+                @apply mb-2 text-2xl text-amber-300;
             }
 
             h3 {
